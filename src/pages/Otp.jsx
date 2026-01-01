@@ -6,10 +6,11 @@ export default function Otp({ phone }) {
   const navigate = useNavigate();
 
   const handleVerify = () => {
-    if (otp.trim().length >= 4) {
+    const code = otp.trim();
+    if (code === "123456") {
       navigate("/home");
     } else {
-      alert("Please enter a valid OTP");
+      alert("Incorrect OTP. Use 123456 to proceed.");
     }
   };
 
